@@ -108,6 +108,16 @@
   border-bottom: none;
 }
 
+.menuTitle {
+  font-family: "Anton", sans-serif;
+  font-size: 2rem;
+  color: var(--burgundy);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px; 
+  text-align: center;
+}
+
 .itemName {
   font-size: 1.18rem;
   font-weight: 700;
@@ -146,6 +156,20 @@
   color: var(--burgundy);
   text-align: right;
   white-space: nowrap;
+}
+
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-right: 12px;
+}
+
+.itemDesc {
+  font-size: 0.86rem;
+  color: var(--gray);
+  font-style: italic;
+  line-height: 1.4;
 }
 /* ---------- FOOTER ---------- */
 .footer {

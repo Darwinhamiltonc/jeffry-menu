@@ -57,6 +57,8 @@ export default function PizzaMenu({
         </div>
       </div>
 
+          <h2 className={styles.menuTitle}>Especialidades de la Casa</h2>
+
       <div className={styles.menu}>
         {items.map((item) => (
           <MenuRow key={item.name} item={item} />
