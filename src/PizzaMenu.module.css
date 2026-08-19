@@ -6,7 +6,7 @@
   --burgundy-dark: #55101b;
   --cream: #f4efe7;
   --charcoal: #221c1a;
-  --gray: #6b615c;
+  --gray: #383532e3;
   --gold: #c9a05c;
   --white: #ffffff;
   background: var(--cream);
@@ -110,16 +110,40 @@
 
 .menuTitle {
   font-family: "Anton", sans-serif;
-  font-size: 2rem;
-  color: var(--burgundy);
+  font-size: 1.7rem;
+  color: var(--cream);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 24px; 
+  letter-spacing: 1px;
   text-align: center;
+  position: relative;
+  width: fit-content;
+  max-width: 78%;
+  margin: 8px auto 28px;
+  padding: 16px 40px;
+  background: var(--burgundy);
 }
 
+.menuTitle::before,
+.menuTitle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 26px;
+  height: 100%;
+  background: var(--burgundy-dark);
+}
+
+.menuTitle::before {
+  left: -26px;
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+}
+
+.menuTitle::after {
+  right: -26px;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
 .itemName {
-  font-size: 1.18rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: var(--burgundy-dark);
   letter-spacing: 0.2px;
@@ -145,7 +169,7 @@
 }
 
 .itemPieces {
-  font-size: 0.82rem;
+  font-size: 0.90rem;
   color: var(--gray);
   text-align: right;
 }
@@ -166,7 +190,7 @@
 }
 
 .itemDesc {
-  font-size: 0.86rem;
+  font-size: 0.90rem;
   color: var(--gray);
   font-style: italic;
   line-height: 1.4;

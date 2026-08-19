@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./PizzaMenu.module.css";
 import { menuItems, type MenuItem } from "./menuData";
 
+
 interface PizzaMenuProps {
   brandName?: string;
   siteUrl?: string;
@@ -12,7 +13,7 @@ interface PizzaMenuProps {
 
 export default function PizzaMenu({
   brandName = "Pizza\nFiesta",
-  siteUrl = "www.pizzafiesta.com",
+  siteUrl = "https://jeffry-menu.vercel.app/",
   tagline = "Hecha con fuego, servida con orgullo",
   heroImageUrl = "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=80",
   items = menuItems,
