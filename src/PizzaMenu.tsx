@@ -1,10 +1,9 @@
-import React from "react";
 import styles from "./PizzaMenu.module.css";
 import { menuItems, type MenuItem } from "./menuData";
 
 
+
 interface PizzaMenuProps {
-  brandName?: string;
   siteUrl?: string;
   tagline?: string;
   heroImageUrl?: string;
@@ -12,10 +11,10 @@ interface PizzaMenuProps {
 }
 
 export default function PizzaMenu({
-  brandName = "Pizza\nFiesta",
+
   siteUrl = "https://jeffry-menu.vercel.app/",
   tagline = "Hecha con fuego, servida con orgullo",
-  heroImageUrl = "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=80",
+  heroImageUrl ="/public/image.png", 
   items = menuItems,
 }: PizzaMenuProps) {
   const handlePrint = () => window.print();
@@ -23,39 +22,7 @@ export default function PizzaMenu({
   return (
     <div className={styles.page}>
       <div className={styles.header}>
-        <div className={styles.brandBand}>
-          <svg
-            className={styles.sliceIcon}
-            viewBox="0 0 100 100"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M50 10 L88 78 A42 42 0 0 1 12 78 Z"
-              stroke="white"
-              strokeWidth="4"
-              strokeLinejoin="round"
-            />
-            <circle cx="50" cy="45" r="3.5" fill="white" />
-            <circle cx="38" cy="58" r="3" fill="white" />
-            <circle cx="62" cy="60" r="3" fill="white" />
-          </svg>
-          <h1 className={styles.brandTitle}>
-            {brandName.split("\n").map((line, i) => (
-              <React.Fragment key={i}>
-                {line}
-                <br />
-              </React.Fragment>
-            ))}
-          </h1>
-        </div>
-
-        <div
-          className={styles.heroPhoto}
-          style={{ backgroundImage: `url('${heroImageUrl}')` }}
-        >
-          <div className={styles.crustEdge} />
-        </div>
+        <img className={styles.heroPhoto} src={heroImageUrl} alt="Hero" />
       </div>
 
           <h2 className={styles.menuTitle}>Especialidades de la Casa</h2>
